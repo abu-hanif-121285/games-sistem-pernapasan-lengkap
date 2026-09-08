@@ -19,7 +19,7 @@ export function SplashScreen() {
         </div>
 
         <div className="relative mx-auto mt-3 flex max-w-md items-center justify-center">
-          <img src="/images/wood-sign.png" alt="" className="h-28 w-auto object-contain sm:h-36" />
+          <img src={`${import.meta.env.BASE_URL}images/wood-sign.png`} alt="" className="h-28 w-auto object-contain sm:h-36" />
           <div className="absolute inset-0 flex items-center justify-center px-10 text-center sm:px-14">
             <p className="font-display text-sm font-extrabold leading-tight text-amber-950 drop-shadow sm:text-lg">
               Misi Menjelajahi
