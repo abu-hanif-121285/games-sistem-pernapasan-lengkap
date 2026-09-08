@@ -67,10 +67,10 @@ export function Background() {
   const g = useGame();
   const img =
     g.screen === "splash" || g.screen === "name"
-      ? "/images/splash-bg.jpg"
+      ? `${import.meta.env.BASE_URL}images/splash-bg.jpg`
       : g.screen === "map"
-        ? "/images/map-bg.jpg"
-        : "/images/home-bg.jpg";
+        ? `${import.meta.env.BASE_URL}images/map-bg.jpg`
+        : `${import.meta.env.BASE_URL}images/home-bg.jpg`;
   return (
     <div className="pointer-events-none fixed inset-0 -z-10 overflow-hidden">
       <img src={img} alt="" className="absolute inset-0 h-full w-full object-cover" />
@@ -102,7 +102,7 @@ export function TopHUD({
           </button>
         )}
         <div className="flex min-w-0 items-center gap-1.5">
-          <img src="/images/oxi.png" alt="" className="h-8 w-8 rounded-full border-2 border-white bg-sky-200 object-cover sm:h-9 sm:w-9" />
+          <img src={`${import.meta.env.BASE_URL}images/oxi.png`} alt="" className="h-8 w-8 rounded-full border-2 border-white bg-sky-200 object-cover sm:h-9 sm:w-9" />
           <span className="max-w-[92px] truncate font-display text-sm font-bold text-white sm:max-w-[180px] sm:text-base">
             {g.data.name || "Penjelajah"}
           </span>
