@@ -35,15 +35,15 @@ export const Oxi = memo(function Oxi({
   className?: string;
 }) {
   void mood;
-  return <Sprite src="/images/oxi.png" alt="OXI si molekul oksigen" size={size} className={className} />;
+  return <Sprite src={`${import.meta.env.BASE_URL}images/oxi.png`} alt="OXI si molekul oksigen" size={size} className={className} />;
 });
 
 export function CharBoy({ size = 140, className = "" }: { size?: number; className?: string }) {
-  return <Sprite src="/images/boy.png" alt="Siswa laki-laki" size={size} className={className} />;
+  return <Sprite src={`${import.meta.env.BASE_URL}images/boy.png`} alt="Siswa laki-laki" size={size} className={className} />;
 }
 
 export function CharGirl({ size = 140, className = "" }: { size?: number; className?: string }) {
-  return <Sprite src="/images/girl.png" alt="Siswa perempuan" size={size} className={className} />;
+  return <Sprite src={`${import.meta.env.BASE_URL}images/girl.png`} alt="Siswa perempuan" size={size} className={className} />;
 }
 
 /** Posisi nomor pada foto paru-paru (persen). */
@@ -74,7 +74,7 @@ export function RespiratoryDiagram({
 }) {
   return (
     <div className={`relative mx-auto ${className}`} style={{ aspectRatio: "3 / 4" }}>
-      <img src="/images/lungs.png" alt="Sistem pernapasan manusia" className="absolute inset-0 h-full w-full object-contain" draggable={false} />
+      <img src={`${import.meta.env.BASE_URL}images/lungs.png`} alt="Sistem pernapasan manusia" className="absolute inset-0 h-full w-full object-contain" draggable={false} />
       {MARKERS.map((m) => {
         const organ = ORGANS.find((o) => o.id === m.id)!;
         const active = activeNo === m.no;
@@ -183,13 +183,13 @@ export function BreathingScene({ phase, className = "" }: { phase: "in" | "out";
 }
 
 export function AlveolusBackdrop({ className = "" }: { className?: string }) {
-  return <img src="/images/alveolus.png" alt="" className={`object-cover ${className}`} draggable={false} />;
+  return <img src={`${import.meta.env.BASE_URL}images/alveolus.png`} alt="" className={`object-cover ${className}`} draggable={false} />;
 }
 
 export function MonsterPolusi({ size = 220, hurt = false }: { size?: number; hurt?: boolean; angry?: boolean }) {
   return (
     <img
-      src="/images/monster.png"
+      src={`${import.meta.env.BASE_URL}images/monster.png`}
       alt="Monster Polusi"
       width={size}
       height={Math.round(size * 1.2)}
